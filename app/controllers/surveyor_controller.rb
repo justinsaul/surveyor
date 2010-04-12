@@ -97,7 +97,8 @@ class SurveyorController < ApplicationController
       end
       # No redirect needed if we're talking to the page via json
       format.js do
-        render :json => @response_set.all_dependencies.to_json
+#        render :json => @response_set.all_dependencies.to_json
+        render :json => @response_set.all_things_hash.to_json
       end
     end
   end
